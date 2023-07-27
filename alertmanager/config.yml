@@ -1,0 +1,17 @@
+---
+route:
+  receiver: 'telegram'
+  repeat_interval: 12h
+  group_interval: 1m
+
+receivers:
+  - name: 'telegram'
+    telegram_configs:
+    - bot_token: ''  # string, remain in quotes
+      chat_id:  # enter chat_id as int i.e. -123456789
+      parse_mode: 'HTML'
+      api_url: https://api.telegram.org
+      # message: "SSL Down"
+      message: '{{ template "telegram.text" . }}'
+templates:
+- '/etc/alertmanager/default.tmpl'
