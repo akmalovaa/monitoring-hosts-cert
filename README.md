@@ -28,8 +28,8 @@ If your monitoring system already uses Prometheus and Grafana, then you can see 
 used docker-compose 🐳
 
 ```bash
-git clone 
-cd 
+git clone https://github.com/akmalovaa/monitoring-hosts-cert.git
+cd monitoring-hosts-cert
 ```
 
 - Change targets hosts `/prometheus/prometheus.yml`
@@ -76,4 +76,10 @@ Start a message with the created bot and write a couple of test messages, then e
 curl https://api.telegram.org/bot<TOKEN>/getUpdates | jq
 ```
 
+### Additional resources
 
+Grafana labs - [Dashboard](https://grafana.com/grafana/dashboards/13230-certificate-monitor/)
+
+Grafana blog - [Post SSL alerting](https://grafana.com/blog/2020/11/25/how-we-eliminated-service-outages-from-certificate-expired-by-setting-up-alerts-with-grafana-and-prometheus/)
+
+Github Prometheus, Grafana, blackbox, alertmanager + caddy - [docker-compose example](https://github.com/stefanprodan/dockprom/tree/master)
